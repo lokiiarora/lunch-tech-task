@@ -6,27 +6,40 @@ block content
     form.form-horizontal(method='POST')
         input(type='hidden', name='_csrf', value=_csrf)
         .form-group
-            label.col-sm-3.control-label(for='city1') City :
+            label.col-sm-3.control-label(for='user1') User :
             .col-sm-7
-                input.form-control(type='text', name='city', id='city1', placeholder='Enter City', autofocus, required)
+                input.form-control(type='text', name='user', id='user1', placeholder='Enter User', autofocus, required)
         .form-group
-            label.col-sm-3.control-label(for='area1') Area :
+            label.col-sm-3.control-label(for='date1') Date :
             .col-sm-7
-                input.form-control(type='text', name='area', id='area1',placeholder='Enter Area', required)
+                input.form-control(type='text', name='date', id='date1', placeholder='Enter Date', autofocus, required)
+        .form-group
+            label.col-sm-3.control-label(for='address1') Address :
+            .col-sm-7
+                input.form-control(type='text', name='address', id='address1', placeholder='Enter Address', autofocus, required)
+        .form-group
+            label.col-sm-3.control-label(for='item1') Item :
+            .col-sm-7
+                input.form-control(type='text', name='item', id='item1', placeholder='Enter Item', autofocus, required)
         .form-group
             .col-sm-offset-3.col-sm-7
                 button.col-sm-3.btn.btn-primary(type='submit')
                     i.fa.fa-user
                     | Submit
     .row
-        .col-md-3.col-md-offset-3
-            b Cities
         .col-md-3
-            b Areas
+            b Address
+        .col-md-3
+            b User
+        .col-md-3
+            b Item
 
     each val in values
         .row
-            .col-md-offset-3.col-md-3= val.city
-            .col-md-3= val.area
+            .col-md-3= val.address
+            .col-md-3= val.user
+            .col-md-3= val.item
+            .col-md-2
+                input(type="checkbox",value="Selected")
     else
         .row Nothing

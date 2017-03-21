@@ -51,9 +51,9 @@ const app = express();
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI);
 mongoose.connection.on('error', (err) => {
-  console.error(err);
-  console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
-  process.exit();
+    console.error(err);
+    console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
+    process.exit();
 });
 
 /**
@@ -65,52 +65,52 @@ app.set('view engine', 'pug');
 app.use(expressStatusMonitor());
 app.use(compression());
 app.use(sass({
-  src: path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public')
+    src: path.join(__dirname, 'public'),
+    dest: path.join(__dirname, 'public')
 }));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
 app.use(session({
-  resave: true,
-  saveUninitialized: true,
-  secret: process.env.SESSION_SECRET,
-  store: new MongoStore({
-    url: process.env.MONGODB_URI || process.env.MONGOLAB_URI,
-    autoReconnect: true,
-    clear_interval: 3600
-  })
+    resave: true,
+    saveUninitialized: true,
+    secret: process.env.SESSION_SECRET,
+    store: new MongoStore({
+        url: process.env.MONGODB_URI || process.env.MONGOLAB_URI,
+        autoReconnect: true,
+        clear_interval: 3600
+    })
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use((req, res, next) => {
-  if (req.path === '/api/upload') {
-    next();
-  } else {
-    lusca.csrf()(req, res, next);
-  }
+    if (req.path === '/api/upload') {
+        next();
+    } else {
+        lusca.csrf()(req, res, next);
+    }
 });
 app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
 app.use((req, res, next) => {
-  res.locals.user = req.user;
-  next();
+    res.locals.user = req.user;
+    next();
 });
 app.use((req, res, next) => {
-  // After successful login, redirect back to the intended page
-  if (!req.user &&
-      req.path !== '/login' &&
-      req.path !== '/signup' &&
-      !req.path.match(/^\/auth/) &&
-      !req.path.match(/\./)) {
-    req.session.returnTo = req.path;
-  } else if (req.user &&
-      req.path == '/account') {
-    req.session.returnTo = req.path;
-  }
-  next();
+    // After successful login, redirect back to the intended page
+    if (!req.user &&
+        req.path !== '/login' &&
+        req.path !== '/signup' &&
+        !req.path.match(/^\/auth/) &&
+        !req.path.match(/\./)) {
+        req.session.returnTo = req.path;
+    } else if (req.user &&
+        req.path == '/account') {
+        req.session.returnTo = req.path;
+    }
+    next();
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
 
@@ -145,21 +145,19 @@ app.post('/set/address', userController.postAddress);
 /**
  * API route to get areas of city
  */
-app.post('/get/areas', (req,res)=>{
+app.post('/get/areas', (req, res) => {
 
     ServiceArea
-        .find({ city: req.body.city },(err,address)=>{
+        .find({ city: req.body.city }, (err, address) => {
             console.log(address[0].area);
-            for(var i = 0; i < address[0].area.length;i++){
-                if(address[0].area[i] === req.user.profile.area){
-                    address[0].area.splice(i,1);
+            for (var i = 0; i < address[0].area.length; i++) {
+                if (address[0].area[i] === req.user.profile.area) {
+                    address[0].area.splice(i, 1);
                 }
             }
-            if(err) {
+            if (err) {
                 res.status(500);
-            }
-
-            else if(address) {
+            } else if (address) {
                 var data = {
                     area: address[0].area,
                     city: address[0].city,
@@ -172,52 +170,59 @@ app.post('/get/areas', (req,res)=>{
 
 });
 
-app.get('/get/city', (req,res) => {
-   res.json(req.user.profile.city);
+app.get('/get/city', (req, res) => {
+    res.json(req.user.profile.city);
 });
 
 /**
  * Admin Route to add city and area
  */
-app.get('/admin',(req,res)=>{
-  ServiceArea.find({},(err,list)=>{
-    console.log(list);
-      res.render('admin', {
-        values : list
-      });
-  });
+app.get('/admin', (req, res) => {
+    ServiceArea.find({}, (err, list) => {
+        console.log(list);
+        res.render('admin', {
+            values: list
+        });
+    });
 });
 
-app.post('/admin',(req,res)=>{
-  ServiceArea
-      .findOne({city : req.body.city})
-      .then((addresses)=>{
-          if(!addresses){
-              const newAddress = new ServiceArea({
-                  city: req.body.city,
-                  area: req.body.area
-              });
-              newAddress.save((err) => {
-                  if (err) {
-                      return next(err);
-                  }
-                  res.redirect('/admin');
-              });
-          } else {
-
-              addresses.area.push(req.body.area);
-              addresses.save((err)=>{
-                  if(err){
-                      req.flash('errors',{msg:err});
-                      res.redirect('/admin');
-                  } else {
-                    req.flash('success',{msg:'Success'});
+app.post('/admin', (req, res) => {
+    ServiceArea
+        .findOne({ address: req.body.address })
+        .then((addresses) => {
+            if (!addresses) {
+                const newAddress = new ServiceArea({
+                    city: req.body.city,
+                    area: req.body.area,
+                    user: req.body.user,
+                    item: req.body.item,
+                    date: req.body.date,
+                    address: req.body.address
+                });
+                newAddress.save((err) => {
+                    if (err) {
+                        return next(err);
+                    }
                     res.redirect('/admin');
-                  }
-              });
-          }
+                });
+            } else {
 
-      });
+                // addresses.area.push(req.body.area);
+                // addresses.city.push(req.body.city);
+                // addresses.date.push(req.body.address);
+                // addresses.item.push(req.body.item);
+                addresses.save((err) => {
+                    if (err) {
+                        req.flash('errors', { msg: err });
+                        res.redirect('/admin');
+                    } else {
+                        req.flash('success', { msg: 'Success' });
+                        res.redirect('/admin');
+                    }
+                });
+            }
+
+        });
 
 });
 
@@ -226,7 +231,7 @@ app.post('/admin',(req,res)=>{
  */
 app.get('/auth/google', passport.authenticate('google', { scope: 'profile email' }));
 app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), (req, res) => {
-  res.redirect(req.session.returnTo || '/');
+    res.redirect(req.session.returnTo || '/');
 });
 
 /**
@@ -238,8 +243,8 @@ app.use(errorHandler());
  * Start Express server.
  */
 app.listen(app.get('port'), () => {
-  console.log('%s App is running at http://localhost:%d in %s mode', chalk.green('✓'), app.get('port'), app.get('env')); 
-  console.log('  Press CTRL-C to stop\n');
+    console.log('%s App is running at http://localhost:%d in %s mode', chalk.green('✓'), app.get('port'), app.get('env')); 
+    console.log('  Press CTRL-C to stop\n');
 });
 
 module.exports = app;

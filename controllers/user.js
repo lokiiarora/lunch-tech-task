@@ -43,13 +43,8 @@ exports.postLogin = (req, res, next) => {
         req.logIn(user, (err) => {
 
             if (err) { return next(err); }
-            if(user.citySelected === false) {
-                req.flash('success', { msg: 'Success! You logged in for the first time.' });
-                res.redirect('/set/address');
-            } else {
-                req.flash('success', { msg: 'Success! You are logged in.' });
-                res.redirect(req.session.returnTo || '/');
-            }
+            req.flash('success', { msg: 'Success! You are logged in.' });
+            res.redirect(req.session.returnTo || '/');
         });
     })(req, res, next);
 };
@@ -84,7 +79,7 @@ exports.postSignup = (req, res, next) => {
     req.assert('email', 'Email is not valid').isEmail();
     req.assert('password', 'Password must be at least 4 characters long').len(4);
     req.assert('confirmPassword', 'Passwords do not match').equals(req.body.password);
-    req.sanitize('email').normalizeEmail({remove_dots: false});
+    req.sanitize('email').normalizeEmail({ remove_dots: false });
 
     const errors = req.validationErrors();
 
@@ -98,12 +93,12 @@ exports.postSignup = (req, res, next) => {
         password: req.body.password
     });
 
-    User.findOne({email: req.body.email}, (err, existingUser) => {
+    User.findOne({ email: req.body.email }, (err, existingUser) => {
         if (err) {
             return next(err);
         }
         if (existingUser) {
-            req.flash('errors', {msg: 'Account with that email address already exists.'});
+            req.flash('errors', { msg: 'Account with that email address already exists.' });
             return res.redirect('/signup');
         }
         user.save((err) => {
@@ -119,19 +114,19 @@ exports.postSignup = (req, res, next) => {
  * GET /set/address
  * Address Page on first login
  */
-exports.getAddress = (req,res) =>{
-  if(!req.user) res.redirect('/');
+exports.getAddress = (req, res) => {
+    if (!req.user) res.redirect('/');
 
-  if(req.user.citySelected === true) res.redirect('/');
+    if (req.user.citySelected === true) res.redirect('/');
 
-  ServiceArea.find({},(err,list)=>{
+    ServiceArea.find({}, (err, list) => {
 
-      res.render('address',{
-          title: 'Address Details',
-          cities: list
-      });
+        res.render('address', {
+            title: 'Address Details',
+            cities: list
+        });
 
-  });
+    });
 
 };
 
@@ -139,7 +134,7 @@ exports.getAddress = (req,res) =>{
  * POST /set/address
  * Set Address on first login
  */
-exports.postAddress = (req,res) =>{
+exports.postAddress = (req, res) => {
 
     User.findById(req.user.id, (err, user) => {
         if (err) { return next(err); }
@@ -152,7 +147,7 @@ exports.postAddress = (req,res) =>{
                 res.redirect('/set/address');
 
             } else {
-                req.flash('success', {msg: 'Address has been updated.'});
+                req.flash('success', { msg: 'Address has been updated.' });
                 //res.redirect('/');
             }
         });
@@ -167,9 +162,9 @@ exports.postAddress = (req,res) =>{
  */
 exports.getAccount = (req, res) => {
     ServiceArea.find({
-        city: { $ne : req.user.profile.city }
-    },{city:1,_id:0},(err,list)=>{
-        res.render('account/profile',{
+        city: { $ne: req.user.profile.city }
+    }, { city: 1, _id: 0 }, (err, list) => {
+        res.render('account/profile', {
             title: 'Account Management',
             cities: list
         });
@@ -311,23 +306,23 @@ exports.postReset = (req, res, next) => {
 
     const resetPassword = () =>
         User
-            .findOne({ passwordResetToken: req.params.token })
-            .where('passwordResetExpires').gt(Date.now())
-            .then((user) => {
-                if (!user) {
-                    req.flash('errors', { msg: 'Password reset token is invalid or has expired.' });
-                    return res.redirect('back');
-                }
-                user.password = req.body.password;
-                user.passwordResetToken = undefined;
-                user.passwordResetExpires = undefined;
-                return user.save().then(() => new Promise((resolve, reject) => {
-                    req.logIn(user, (err) => {
-                        if (err) { return reject(err); }
-                        resolve(user);
-                    });
-                }));
-            });
+        .findOne({ passwordResetToken: req.params.token })
+        .where('passwordResetExpires').gt(Date.now())
+        .then((user) => {
+            if (!user) {
+                req.flash('errors', { msg: 'Password reset token is invalid or has expired.' });
+                return res.redirect('back');
+            }
+            user.password = req.body.password;
+            user.passwordResetToken = undefined;
+            user.passwordResetExpires = undefined;
+            return user.save().then(() => new Promise((resolve, reject) => {
+                req.logIn(user, (err) => {
+                    if (err) { return reject(err); }
+                    resolve(user);
+                });
+            }));
+        });
 
     const sendResetPasswordEmail = (user) => {
         if (!user) { return; }
@@ -390,17 +385,17 @@ exports.postForgot = (req, res, next) => {
 
     const setRandomToken = token =>
         User
-            .findOne({ email: req.body.email })
-            .then((user) => {
-                if (!user) {
-                    req.flash('errors', { msg: 'Account with that email address does not exist.' });
-                } else {
-                    user.passwordResetToken = token;
-                    user.passwordResetExpires = Date.now() + 3600000; // 1 hour
-                    user = user.save();
-                }
-                return user;
-            });
+        .findOne({ email: req.body.email })
+        .then((user) => {
+            if (!user) {
+                req.flash('errors', { msg: 'Account with that email address does not exist.' });
+            } else {
+                user.passwordResetToken = token;
+                user.passwordResetExpires = Date.now() + 3600000; // 1 hour
+                user = user.save();
+            }
+            return user;
+        });
 
     const sendForgotPasswordEmail = (user) => {
         if (!user) { return; }
