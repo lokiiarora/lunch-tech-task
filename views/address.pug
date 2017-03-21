@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    .page-header
+        h3 Set Address
+    form.form-horizontal(method='POST')
+        input(type='hidden', name='_csrf', value=_csrf)
+        .form-group
+            label.col-sm-3.control-label(for='city') Select City :
+            .col-sm-7
+                select.form-control(name='city', id='city', autofocus, required)
+                    each x in cities
+                        option= x.city
+        .form-group
+            label.col-sm-3.control-label(for='area') Select Area :
+            .col-sm-7
+                select.form-control(name='area', id='area', required)
+        .form-group
+            .col-sm-offset-3.col-sm-7
+                button.col-sm-3.btn.btn-primary(type='submit')
+                    i.fa.fa-user
+                    | Submit
+
+    .page-header
+        h3 Delete Account
+
+    form.form-horizontal(action='/account/delete', method='POST')
+        .form-group
+            p.col-sm-offset-3.col-sm-4 If you couldn't find your place, we probably don't serve there. Click on the button to delete your account.
+            input(type='hidden', name='_csrf', value=_csrf)
+            .col-sm-offset-3.col-sm-4
+                button.btn.btn-danger(type='submit')
+                    i.fa.fa-trash
+                    | Delete my account
+

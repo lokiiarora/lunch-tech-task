@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    .page-header
+        h3 Enter Available Addresses
+    form.form-horizontal(method='POST')
+        input(type='hidden', name='_csrf', value=_csrf)
+        .form-group
+            label.col-sm-3.control-label(for='city1') City :
+            .col-sm-7
+                input.form-control(type='text', name='city', id='city1', placeholder='Enter City', autofocus, required)
+        .form-group
+            label.col-sm-3.control-label(for='area1') Area :
+            .col-sm-7
+                input.form-control(type='text', name='area', id='area1',placeholder='Enter Area', required)
+        .form-group
+            .col-sm-offset-3.col-sm-7
+                button.col-sm-3.btn.btn-primary(type='submit')
+                    i.fa.fa-user
+                    | Submit
+    .row
+        .col-md-3.col-md-offset-3
+            b Cities
+        .col-md-3
+            b Areas
+
+    each val in values
+        .row
+            .col-md-offset-3.col-md-3= val.city
+            .col-md-3= val.area
+    else
+        .row Nothing

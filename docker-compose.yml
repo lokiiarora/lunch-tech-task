@@ -1,0 +1,35 @@
+node:
+    build: .
+
+    ports:
+        - "3000:3000"
+
+    links:
+        - mongo:mongo
+
+    volumes:
+        - .:/usr/src/app
+        - /usr/src/app/node_modules
+
+mongo:
+    build: ./mongo
+
+    ports:
+        - "27017:27017"
+
+    volumes_from:
+        - volumes_data
+
+volumes_data:
+    image: tianon/true
+
+    volumes:
+        - /data/db
+
+nginx:
+    build: ./nginx
+
+    links:
+        - node:node
+    ports:
+        - "80:80"
