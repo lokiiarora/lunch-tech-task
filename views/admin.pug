@@ -6,7 +6,7 @@ block content
     form.form-horizontal
         input(type="hidden", name="_crsf", value=_csrf)
         .form-group
-            label.col-sm-3.control-label(for="enterAddress") Filter Address :
+            label.col-sm-3.control-label(for="enterAddress") Filter Address(Enter data to filter records) :
             .col-sm-7
                 input.form-control(type='text', name="enterAddress", id="enterAddress", placeholder="Enter filter Address", autofocus, required)
     .row(style="margin-top:30px;")
@@ -31,7 +31,7 @@ block content
     else
         .row(style="text-align:center;") Nothing 
     .page-header
-        h3 Enter Available Addresses
+        h3 Enter Available Addresses (Enter values to insert in the database)
     form.form-horizontal(method='POST')
         input(type='hidden', name='_csrf', value=_csrf)
         .form-group
@@ -55,20 +55,3 @@ block content
                 button.col-sm-3.btn.btn-primary(type='submit')
                     i.fa.fa-user
                     | Submit
-    //- .row
-    //-     .col-md-3
-    //-         b Address
-    //-     .col-md-3
-    //-         b User
-    //-     .col-md-3
-    //-         b Item
-
-    //- each val in values
-    //-     .row
-    //-         .col-md-3= val.address
-    //-         .col-md-3= val.user
-    //-         .col-md-3= val.item
-    //-         .col-md-2
-    //-             input(type="checkbox",value="Selected")
-    //- else
-    //-     .row Nothing
