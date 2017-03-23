@@ -10,7 +10,7 @@ const ServiceArea = require('../models/ServiceAreas');
  */
 exports.getLogin = (req, res) => {
     if (req.user) {
-        return res.redirect('/');
+        return res.redirect('/admin');
     }
     res.render('account/login', {
         title: 'Login'
@@ -64,7 +64,7 @@ exports.logout = (req, res) => {
  */
 exports.getSignup = (req, res) => {
     if (req.user) {
-        return res.redirect('/');
+        return res.redirect('/admin');
     }
     res.render('account/signup', {
         title: 'Create Account'
@@ -105,7 +105,7 @@ exports.postSignup = (req, res, next) => {
             if (err) {
                 return next(err);
             }
-            res.redirect('/');
+            res.redirect('/admin');
         });
     });
 };
