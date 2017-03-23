@@ -2,6 +2,35 @@ extends layout
 
 block content
     .page-header
+        h3 Search for available addresses
+    form.form-horizontal
+        input(type="hidden", name="_crsf", value=_csrf)
+        .form-group
+            label.col-sm-3.control-label(for="enterAddress") Filter Address :
+            .col-sm-7
+                input.form-control(type='text', name="enterAddress", id="enterAddress", placeholder="Enter filter Address", autofocus, required)
+    .row(style="margin-top:30px;")
+        .col-md-3
+            b Address
+        .col-md-3
+            b User
+        .col-md-3
+            b Item
+
+    each val in values
+        .row.value-container
+            span Date :
+            span(style="font-weight:bold;")= val.date
+            each dat in val.data
+                .row.values
+                    .col-md-3.val-address= dat.address
+                    .col-md-3.val-user= dat.user
+                    .col-md-3.val-item= dat.item
+                    .col-md-2
+                        input(type="checkbox",value="Selected")
+    else
+        .row(style="text-align:center;") Nothing 
+    .page-header
         h3 Enter Available Addresses
     form.form-horizontal(method='POST')
         input(type='hidden', name='_csrf', value=_csrf)
@@ -26,20 +55,20 @@ block content
                 button.col-sm-3.btn.btn-primary(type='submit')
                     i.fa.fa-user
                     | Submit
-    .row
-        .col-md-3
-            b Address
-        .col-md-3
-            b User
-        .col-md-3
-            b Item
+    //- .row
+    //-     .col-md-3
+    //-         b Address
+    //-     .col-md-3
+    //-         b User
+    //-     .col-md-3
+    //-         b Item
 
-    each val in values
-        .row
-            .col-md-3= val.address
-            .col-md-3= val.user
-            .col-md-3= val.item
-            .col-md-2
-                input(type="checkbox",value="Selected")
-    else
-        .row Nothing
+    //- each val in values
+    //-     .row
+    //-         .col-md-3= val.address
+    //-         .col-md-3= val.user
+    //-         .col-md-3= val.item
+    //-         .col-md-2
+    //-             input(type="checkbox",value="Selected")
+    //- else
+    //-     .row Nothing

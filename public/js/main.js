@@ -5,6 +5,35 @@ $(document).ready(function() {
     var address = $('#address');
 
     // Place JavaScript code here...
+    var containerArray = $('.values');
+    $('#enterAddress').keyup(function(event) {
+        var enteredText = $("#enterAddress").val();
+        var valueContainerArray = document.getElementsByClassName('value-container');
+        var addressArray = $(".val-address");
+        for (var i = 0; i < addressArray.length; i++) {
+            var superString = addressArray[i].innerHTML;
+            if (superString.search(enteredText) !== -1) {
+                containerArray[i].style.display = "block";
+            } else {
+                containerArray[i].style.display = "none";
+            }
+        }
+        for (var j = 0; j < valueContainerArray.length; j++) {
+            var valueArray = valueContainerArray[j].getElementsByClassName('values');
+            var y = 0;
+            for (k = 0; k < valueArray.length; k++) {
+                if (valueArray[k].style.display == "block") {
+                    y = 1;
+                    break;
+                }
+            }
+            if (y == 0) {
+                valueContainerArray[j].style.display = "none";
+            } else {
+                valueContainerArray[j].style.display = "block";
+            }
+        }
+    });
 
     $.ajaxPrefilter(function(options, _, xhr) {
         xhr.setRequestHeader(CSRF_HEADER, token);

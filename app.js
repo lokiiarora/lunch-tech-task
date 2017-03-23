@@ -178,26 +178,33 @@ app.get('/get/city', (req, res) => {
  * Admin Route to add city and area
  */
 app.get('/admin', (req, res) => {
-    ServiceArea.find({}, (err, list) => {
-        console.log(list);
-        res.render('admin', {
-            values: list
+    if (!req.user) {
+        res.redirect('/login');
+    } else {
+        ServiceArea.find({}, (err, list) => {
+            console.log(list);
+            res.render('admin', {
+                values: list,
+                title: 'Admin'
+            });
         });
-    });
+    }
 });
 
 app.post('/admin', (req, res) => {
     ServiceArea
-        .findOne({ address: req.body.address })
+        .findOne({ date: req.body.date })
         .then((addresses) => {
             if (!addresses) {
                 const newAddress = new ServiceArea({
-                    city: req.body.city,
-                    area: req.body.area,
-                    user: req.body.user,
-                    item: req.body.item,
                     date: req.body.date,
-                    address: req.body.address
+                    data: [{
+                        city: req.body.city,
+                        area: req.body.area,
+                        user: req.body.user,
+                        item: req.body.item,
+                        address: req.body.address
+                    }]
                 });
                 newAddress.save((err) => {
                     if (err) {
@@ -206,11 +213,14 @@ app.post('/admin', (req, res) => {
                     res.redirect('/admin');
                 });
             } else {
-
-                // addresses.area.push(req.body.area);
-                // addresses.city.push(req.body.city);
-                // addresses.date.push(req.body.address);
-                // addresses.item.push(req.body.item);
+                var data = {
+                    city: req.body.city,
+                    area: req.body.area,
+                    user: req.body.user,
+                    item: req.body.item,
+                    address: req.body.address
+                };
+                addresses.data.push(data);
                 addresses.save((err) => {
                     if (err) {
                         req.flash('errors', { msg: err });
