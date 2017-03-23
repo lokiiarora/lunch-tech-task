@@ -183,6 +183,7 @@ app.get('/admin', (req, res) => {
     } else {
         ServiceArea.find({}, (err, list) => {
             console.log(list);
+            req.flash('success', { msg: 'Successfully Logged in' });
             res.render('admin', {
                 values: list,
                 title: 'Admin'

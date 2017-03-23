@@ -10,6 +10,7 @@ const ServiceArea = require('../models/ServiceAreas');
  */
 exports.getLogin = (req, res) => {
     if (req.user) {
+        req.flash('success', { msg: 'Successfully Logged in' });
         return res.redirect('/admin');
     }
     res.render('account/login', {
