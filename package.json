@@ -1,11 +1,11 @@
 {
-  "name": "InterviewAssignment",
-  "version": "4.3.0",
+  "name": "SRMAssignment",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/AceTheNinja/lunchrev.git"
   },
-  "author": "Tapan Rai",
+  "author": "Lokesh Raj Arora",
   "scripts": {
     "start": "node app.js",
     "test": "mocha --reporter spec",
