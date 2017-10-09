@@ -1,0 +1,168 @@
+    .reversal
+    {
+        margin-top: 12%;
+        margin-left: 35%;
+    }
+    .reversal-text
+    {
+        color: #49abc4;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .retailer-select
+    {
+        width: 50%;
+        margin-top: 5%;
+    }
+    .reverse-btn
+    {
+        margin-top: 5%;
+        margin-left: 75%;
+        background-color: #49abc4;
+    }
+    .btn:hover
+    {
+        background-color: #49abc4;
+        color: white;
+    }
+    .caret 
+    {
+        border-top: none;
+    }
+     .dimensions
+    {
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 1%;
+    }
+    input[type=text]:disabled
+    {
+        font-size: 18px;
+        font-weight: normal;
+    }
+    input[type=text]
+    {
+        font-size: 18px;
+        font-weight: normal;
+    }
+        .dropdown-content li>span
+    {
+        color: #49abc4;
+        background-color: white;
+    }
+    .dropdown-content li.active.selected
+    {
+        font-weight: bold;
+    }
+    .dropdown-content li:hover
+    {
+        font-weight: bold;
+    }
+    button, input, optgroup, select, textarea 
+    {
+    color: #49abc4;
+    }
+    .input-field label 
+    {
+    color: #999999;
+    }
+    .input-field label:not(.label-icon).active {
+    color: #49abc4;
+    }    
+     .input-field input[type=password]:focus + label 
+    {
+     color: #49abc4;
+    }
+    button, optgroup, select, textarea 
+    {
+    color: #49abc4;
+    font-weight: bold;
+    }
+   .input-field input[type=password]:focus {
+     border-bottom: 1px solid #49abc4;
+     box-shadow: 0 1px 0 0 #49abc4;
+   }
+   .btn
+   {
+       text-transform: none;
+       border-radius: 0px;
+        background-color: #49abc4;
+        box-shadow: 0 0 0 0 rgba(0,0,0,0.14), 0 0 0 0 rgba(0,0,0,0.12), 0 0 0 0 rgba(0,0,0,0.2);
+    }
+    .btn:hover
+    {
+        font-weight: bold;
+        width: 116px;
+        height: 36px;
+        background-color: #49abc4;
+        box-shadow: 0 0 0 0 rgba(0,0,0,0.14), 0 0 0 0 rgba(0,0,0,0.12), 0 0 0 0 rgba(0,0,0,0.2);
+    }
+   .select-wrapper input.select-dropdown
+   {
+        font-size: 18px;
+   }
+   @media screen and (min-width:501px) and (max-width:810px)
+   {
+       .reversal-text
+       {
+           margin-top: 20%;
+           margin-left: -20%;
+           width: 80%;
+       }
+       .btn
+       {
+           margin-left: 35%;
+       }
+       .retailer-select
+       {
+           width: 80%;
+           margin-left: -20%;
+       }
+
+   }
+    @media screen and (min-width:1275px) and (max-width:1380px)
+    {
+        .btn
+        {
+            margin-left: 72%;
+        }
+    }
+     @media screen and (min-width:1275px) and (max-width:1380px)
+    {
+        .btn
+        {
+            margin-left: 72%;
+        }
+    }
+    @media screen and (min-width:900px) and (max-width:1130px)
+    {
+        .btn
+        {
+            margin-left: 65%;
+        }
+    }
+    @media screen and (min-width:1130px) and (max-width:1270px)
+    {
+        .btn
+        {
+            margin-left: 70%;
+        }
+    }
+     @media screen and (max-width:500px)
+     {
+         .reversal-text
+       {
+           margin-top: 20%;
+           margin-left: -20%;
+           width: 80%;
+       }
+       .retailer-select
+       {
+           width: 80%;
+           margin-left: -20%;
+       }
+        .btn
+        {
+            margin-left: 20%;
+        }
+     }

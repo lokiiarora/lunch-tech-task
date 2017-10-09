@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <link href="css/NavBar.css" rel="stylesheet" type="text/css">    
+  <link href="css/Home.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<ul id="settings" class="dropdown-content">
+        <li ><a href="ChangePassword" class="set"><span class="submenu">Change Password</span></a></li>
+        <li ><a href="MyInfo" class="set"><span class="submenu">My Info</span></a></li>
+        <li ><a href="ProductPricing" class="set"><span class="submenu">My Products</span></a></li>
+    </ul>
+    <ul id="banking" class="dropdown-content">
+        <li ><a href="#!" class="set"><span class="submenu">Bank Details/Net Transfer</span></a></li>
+        <li ><a href="#!" class="set"><span class="submenu">My Deposit Slip</span></a></li>
+    </ul>
+    <ul id="retailers" class="dropdown-content">
+        <li ><a href="Reports" class="set"><span class="submenu">Manage Retailers</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">OD</span></a></li>
+        <li ><a href="TopUp" class="set"><span class="submenu">Retailer TopUp</span></a></li>
+        <li ><a href="Reversal" class="set"><span class="submenu">Retailer TopUp Reversal</span></a></li>
+        <li ><a href="DeviceBooking" class="set"><span class="submenu">Device Booking</span></a></li>
+    </ul>
+    <ul id="complaints" class="dropdown-content">
+        <li ><a href="#!" class="set"><span class="submenu">My Tickets</span></a></a></li>
+    </ul>
+    <ul id="downloads" class="dropdown-content">
+        <li ><a href="#!" class="set"><span class="submenu">BC Letter</span></a></a></li>
+        <li ><a href="#!" class="set"><span class="submenu">Recharge Margin</span></a></a></li>
+        <li ><a href="#!" class="set"><span class="submenu">Certificates</span></a></a></li>
+    </ul>
+      <ul id="reports" class="dropdown-content">
+        <li ><a href="Reports" class="set"><span class="submenu">Income Report</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">Bill Payment Report</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">Transactions</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">Recharge Report</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">Working Capital TopUp Report</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">Payment Gateway Report</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">Retailer TopUp Report</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">OD Report</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">Account Statement</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">Retailer Device Booking Report</span></a></li>
+        <li ><a href="Reports" class="set"><span class="submenu">Invoice</span></a></li>
+    </ul>
+<div class="bar" id="navigation">
+ <nav >
+    <div class="nav-wrapper z-depth-0 ">
+      <a href="#!" class="brand-logo"><img src="img/logo.png" id="logo"></a>
+      <a href="www.google.com" class="butten" id="log" onmouseover="logout(this.id)" onclick="logout(this.id)"><img src="img/butt.png" class="butt">Logout</a>
+      <p class="balance">Rs.3455666.23</p>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><img src="img/menu-button.png" class="hamburger" id="ham"></a>
+      <ul class="right hide-on-med-and-down navi">
+        <li><a href="Home" class="dropdown-button" onclick="func(this.id)" href="#" id="setting-nav" style="text-decoration:none">Home</a></li>
+        <li><a class="dropdown-button" onclick="func(this.id)" href="#" id="setting-nav" style="text-decoration:none" data-activates="settings" data-hover="true"><span class="side-style">Settings</span></a></li>
+        <li><a class="dropdown-button" onclick="func(this.id)" href="#" id="banking-nav" style="text-decoration:none" data-activates="banking" data-hover="true"><span class="side-style">Banking</span></a></li>
+        <li><a class="dropdown-button" onclick="func(this.id)" href="#" id="retailer-nav" style="text-decoration:none" data-activates="retailers" data-hover="true"><span class="side-style">Retailers</span></a></li>
+        <li><a class="dropdown-button" onclick="func(this.id)" href="#" id="complaints-nav" style="text-decoration:none" data-activates="complaints" data-hover="true"><span class="side-style">Complaints</span></a></li>
+        <li><a class="dropdown-button" onclick="func(this.id)" href="#" id="downloads-nav" style="text-decoration:none"  data-activates="downloads" data-hover="true"><span class="side-style">Downloads</span></a></li>
+        <li><a class="dropdown-button" onclick="func(this.id)" href="#" id="reports-nav" style="text-decoration:none" data-activates="reports" data-hover="true"><span class="side-style">Reports</span></a></li>
+      </ul>
+
+
+
+      <ul class="side-nav" id="mobile-demo">
+            
+             <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a href="Home" class="collapsible-header side"><span class="side-style">Home</span></a>
+                </li>
+                </ul>
+            </li>
+
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header side"><span class="side-style">Settings</span></a>
+                    <div class="collapsible-body">
+                    <ul class="sub">
+                        <li><a href="ChangePassword"><span class="s">Change Password</span></a></li>
+                        <li><a href="MyInfo"><span class="s">My Info</span></a></li>
+                        <li><a href="ProductPrincing"><span class="s">My Products</span></a></li>
+                    </ul>
+                    </div>
+                </li>
+                </ul>
+            </li>
+
+
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header side"><span class="side-style">Banking</span></a>
+                    <div class="collapsible-body">
+                    <ul class="sub">
+                        <li><a href="#!"><span class="s">Bank Details / Net Transfer</span></a></li>
+                        <li><a href="#!"><span class="s">My Deposit Slip</span></a></li>
+                        
+                    </ul>
+                    </div>
+                </li>
+                </ul>
+            </li>
+
+
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header side"><span class="side-style">Retailers</span></a>
+                    <div class="collapsible-body">
+                    <ul class="sub submenu">
+                        <li><a href="Reports"><span class="s">Manage Retailers</span></a></li>
+                        <li><a href="Reports"><span class="s">OD</span></a></li>
+                        <li><a href="TopUp"><span class="s">Retailer TopUp</span></a></li>
+                        <li><a href="Reversal"><span class="s">Retailer TopUp Reversal</span></a></li>
+                        <li><a href="DeviceBooking"><span class="s">Device Booking</span></a></li>
+                        
+                    </ul>
+                    </div>
+                </li>
+                </ul>
+            </li>
+
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header side"><span class="side-style">Complaints</span></a>
+                    <div class="collapsible-body">
+                    <ul class="sub">
+                        <li><a href="#!"><span class="s">My Tickets</span></a></li>   
+                    </ul>
+                    </div>
+                </li>
+                </ul>
+            </li>
+
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header side"><span class="side-style">Downloads</span></a>
+                    <div class="collapsible-body">
+                    <ul class="sub">
+                        <li><a href="#!"><span class="s">BC Letter</span></a></li>
+                        <li><a href="#!"><span class="s">Recharge Margin</span></a></li>
+                        <li><a href="#!"><span class="s">Certificates</span></a></li>   
+                    </ul>
+                    </div>
+                </li>
+                </ul>
+            </li>
+
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header side"><span class="side-style">Reports</span></a>
+                    <div class="collapsible-body">
+                    <ul class="sub">
+                        <li><a href="Reports"><span class="s">Income Reports</span></a></li>
+                        <li><a href="Reports"><span class="s">Bill Payment Report</span></a></li>
+                        <li><a href="Reports"><span class="s">Transactions</span></a></li>
+                        <li><a href="Reports"><span class="s">Recharge Report</span></a></li>
+                        <li><a href="Reports"><span class="s">Working Capital Report</span></a></li>
+                        <li><a href="Reports"><span class="s">Payment Gateway Report</span></a></li>   
+                        <li><a href="Reports"><span class="s">Retailer TopUp</span></a></li>
+                        <li><a href="Reports"><span class="s">OD Report</span></a></li>
+                        <li><a href="Reports"><span class="s">Account Statement</span></a></li>   
+                        <li><a href="Reports"><span class="s">Retailer Device Booking</span></a></li>
+                        <li><a href="Reports"><span class="s">Invoice</span></a></li>   
+                    </ul>
+                    </div>
+                </li>
+                </ul>
+            </li>
+             <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header side"><span class="side-style">Logout</span></a>
+                </li>
+                </ul>
+            </li>
+        
+        </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="notifications">
+        <p class="notification-text color-red">We thank you in your participation in nation building and following the Government directives.Now take limits without any authorisation letters by depositing 50, 100, 500 and 2000 rupees notes in our accounts.
+Get immediate limits for payment gateway, fund transfer, NEFT and IMPS.</p>
+<p class="notification-text color-green">Please deposit cash only upto Rs. 1,99,000 per mobile/PAN per day in any bank account. Limit will not be given for higher cash deposit till government
+clarification.</p>
+</div>
+
+<div class="quick-access">
+    <button onclick="saveb(this.id)" id="qa1" class="btn btn-qa">BUTTON 1</button>
+    <button onclick="saveb(this.id)" id="qa2" class="btn btn-qa">BUTTON 2</button>
+    <button onclick="saveb(this.id)" id="qa3" class="btn btn-qa">BUTTON 3</button>
+    <button onclick="saveb(this.id)" id="qa4" class="btn btn-qa">BUTTON 4</button>
+    <button onclick="saveb(this.id)" id="qa5" class="btn btn-qa">BUTTON 5</button>
+</div>
+
+<footer>
+        <div class="container">
+            For Support: Call 044 23861235/Mail: customercare@paynearby.in
+        </div>
+</footer>
+</div>
+<main style="margin-top:5%">
+    <div class="row">
+			<div class="col-sm-4 col-xs-0"></div>
+			<div class="col-sm-4 col-xs-12 text-center">
+			</div>
+			
+		</div>
+
+        <div class="row">
+			<div class="col-sm-12 text-center">
+			<br>
+				<ul class="nav nav-tabs nav-justified custom-tabs">
+				  <li class="active"><button  class="btn cardbut" id="default-bank" onclick="display_home(), saveb(this.id)">Instant Limit</a></li>
+				  <li><button class="btn cardbut" id="other-bank" onclick="display(), saveb(this.id)"> Others (SBI, KVB)</button></li>
+				</ul>
+                <br>
+                
+
+                <!-- For Desktop -->
+				<div class="row cards-wrapper">
+                    	<!-- Tile 1 -->
+						<div class="panel-style col-sm-4 bank-1">
+							<br>
+							<div class="panel panel-default common-panel-box my-3d-shadow" data-tile="1">
+							  <div class="panel-heading yesBank-card">
+							  
+								<img src="img/yesbank.png" alt="Yes Bank" class="yes img-responsive main-logo-img popup-hide"/>
+								<h2 class="card-head">Online Transfer</h2>
+								<p class="text-bold">From any Bank, Transfer online using RTGS/NEFT/IMPS to YES Bank</p>
+							  </div>
+							  <div class="panel-body yesBank-body">
+								<div class="text-left">
+									<ul class="steps-list">
+										<li class="text-center">
+											<h4>Steps to Get Limit</h4>
+										</li>
+										<br>
+                                        <li>
+											<span class="step-num">Step 1</span>
+											<p class="myMargin-zero step-desc">Login to your Net Banking Account</p>
+										</li>
+										<li>
+											<span class="step-num">Step 2</span>
+											<p class="myMargin-zero step-desc">Add the Beneficiary Account No. given below</p>
+											<div class="account-details panel-body z-depth-4" style="width:90%;margin-left:10%;border: 1px solid #ffffff">
+                                                <p style="display: inline; padding-left: 10px; padding-top: 20px">Account Number:</p><p style="display: inline; font-weight: bold; color: #49abc4">   NEARBY</p><p style="display: inline; padding-right: 10px">9820XXXXXX</p>
+                                                <br>
+                                                <p style="display: inline; padding-left: 10px">IFSC Code:</p><p style="display: inline; font-weight: bold; color: #49abc4">   YESB0CMSNOC</p>
+                                                <br>
+                                                <p class="finline edi fbold fpadl">YESB</p><p class="fcolor fbold finline">Number(0)</p><p class="finline fbold">CMSN</p><p class="fcolor fbold finline">Letter(O)</p><p class="finline fbold">C</p>
+                                            </div>
+										</li>
+										<li>
+                                            <br>
+											<span class="step-num">Step 3</span>
+											<p class="myMargin-zero step-desc">Transfer the required Top-Up Amount</p>
+										</li>
+									</ul>
+								</div>
+								<br><br><br><br><br><br><br>
+							  </div>
+							</div>
+						</div>
+
+                        <!-- Tile 2 -->
+						<div class="col-sm-4 bank-1">
+							<br>
+							<div class="panel panel-default common-panel-box my-3d-shadow my-relative-pos" data-tile="1">
+							  <div class="panel-heading yesBank-card">
+								<img src="img/axisbank.png" alt="Yes Bank" class="yes img-responsive main-logo-img popup-hide"/>
+								<h2 class="card-head">Cash Deposit Machine</h2>
+								<p class="text-bold">Deposit Cash at CDM. Get Instant Limit 24X7.</p>
+							  </div>
+                              <br>
+                              <div class="">
+                                  <p style="font-weight: bold">Get your own AXIS Bank CDM Card now!</p>
+                                  <button class="btn" id="getCDM" onclick="saveb(this.id)" data-toggle="modal" data-target="#cmdModal">Get CDM Card</button>
+                              </div>
+							  <div class="panel-body yesBank-body">
+								<div class="text-left">
+									<ul class="steps-list">
+										<li class="text-center">
+											<h4>How to get Limit using CDM Card</h4>
+										</li>
+                                        <br>
+										<li>
+											<span class="step-num">Step 1</span>
+											<p class="myMargin-zero step-desc">Go to your nearest AXIS Bank CDM</p>
+										</li>
+										<li>
+											<span class="step-num">Step 2</span>
+											<p class="myMargin-zero step-desc">Swipe your AXIS Bank CDM Card</p>
+										</li>
+										<li>
+											<span class="step-num">Step 3</span>
+											<p class="myMargin-zero step-desc">Deposit the Cash in the CDM</p>
+										</li>
+									</ul>
+								</div>
+								<br><br><br><br><br>
+                                <p class="text-center bottom-tnc">For CDM deposits under Rs.10000, Fees = Rs. 25/-</p>
+							  </div>
+							</div>
+						</div>
+
+                        <!-- Tile 1 -->
+						<div class="col-sm-4 bank-1">
+							<br>
+							<div class="panel panel-default common-panel-box my-3d-shadow my-relative-pos" data-tile="1">
+							  <div class="panel-heading yesBank-card">
+								<img src="img/icici.png" alt="Yes Bank" class="yes img-responsive main-logo-img popup-hide"/>
+								<br>
+                                <h2 class="card-head">Branch Deposit</h2>
+                                <br>
+								<p class="text-bold">Get Instant Top-Up on Cash Deposit at your closest ICICI Branch</p>
+							  </div>
+							  <div class="panel-body yesBank-body">
+								<div class="text-left">
+									<ul class="steps-list">
+										<li class="text-center">
+											<h4>Steps to Get Limit</h4>
+										</li>
+                                        <br>
+										<li>
+											<span class="step-num">Step 1</span>
+											<p class="myMargin-zero step-desc">Login to your Net Banking Account</p>
+										</li>
+										<li>
+											<span class="step-num">Step 2</span>
+											<p class="myMargin-zero step-desc">Fill Amount & Date on the Printed Slip</p>
+										</li>
+										<li>
+											<span class="step-num">Step 3</span>
+											<p class="myMargin-zero step-desc">Submit Slip at the Branch Counter</p>
+										</li>
+                                        <li>
+											<button id="dSlip" onclick="saveb(this.id)" class="btn btn-style">Download Deposit Slip</button>
+                                            <button id="aLetter" onclick="saveb(this.id)" class="btn btn-style">Download AMI Letter</button>
+										</li>
+									</ul>
+								</div>
+								<br><br><br><br>
+                                <p class="text-center bottom-tnc">For CDM deposits under Rs.10000, Fees = Rs. 25/-</p>
+							  </div>
+							</div>
+						</div>
+
+                        <!-- Tile 1 -->
+						<div class="col-sm-4 bank-1">
+							<br>
+							<div class="panel panel-default common-panel-box my-3d-shadow" data-tile="1">
+							  <div class="panel-heading yesBank-card">
+								<img src="img/axisbank.png" alt="Yes Bank" class="yes img-responsive main-logo-img popup-hide"/>
+								<h2 class="card-head">Branch Deposit</h2>
+								<p class="text-bold">Get Instant Top-Up on Cash Deposit at your closest Axis Branch</p>
+							  </div>
+							  <div class="panel-body yesBank-body">
+								<div class="text-left">
+									<ul class="steps-list">
+										<li class="text-center">
+											<h4>Steps to Get Limit</h4>
+										</li>
+                                        <br>
+										<li>
+											<span class="step-num">Step 1</span>
+											<p class="myMargin-zero step-desc">Download & Print pre-filled Deposit Slip</p>
+										</li>
+										<li>
+											<span class="step-num">Step 2</span>
+											<p class="myMargin-zero step-desc">Fill Amount & Date on the Printed Slip</p>
+										</li>
+										<li>
+											<span class="step-num">Step 3</span>
+											<p class="myMargin-zero step-desc">Submit Slip at the Branch Counter</p>
+										</li>
+                                         <li>
+											<button id="depSlip" onclick="saveb(this.id)" class="btn btn-style">Download Deposit Slip</button>
+                                            <button id="amiLetter" onclick="saveb(this.id)" class="btn btn-style">Download AMI Letter</button>
+										</li>
+                                        <br><br>
+                                        <li>
+                                            <p class="text-center fbold">To get Insant Limit 24X7</p><p class="text-center fbold"> Get your own AXIS Bank CDM Card Now!</p>
+                                            <div class="cdmCard">
+                                            <button onclick="saveb(this.id)" id="gcdm" class="btn btn-style" data-toggle="modal" data-target="#cmdModal">Get CDM Card</button>
+                                            </div>
+                                        </li>
+									</ul>
+								</div>
+								<br><br>
+                                 <p class="text-center bottom-tnc">For CDM deposits under Rs.10000, Fees = Rs. 25/-</p>
+							  </div>
+							</div>
+						</div>
+
+                    
+                     <!-- Tile 5 -->
+						<div class="col-sm-4 bank-1">
+							<br>
+							<div class="panel panel-default common-panel-box my-3d-shadow" data-tile="5">
+							  <div class="panel-heading payGate-card">
+                                  <div class="netImage"><img src="img/net.png" alt="Net Banking" class="img-responsive main-logo-img popup-hide"/>
+								</div>
+								<h2 class="card-head">Payment Gateway</h2>
+								
+                                <p class="pay-text text-bold">Min. amount is Rs.10,000/-<br>Fees applicable = Rs.12 + Loading Charges</p>
+							  </div>
+							  <div class="panel-body yesBank-body">
+								<h4 class="text-center">Amount & Charges</h4>
+								<br>
+								<div class="row payment-gate-info fbold">
+									<div class="col-sm-4 col-xs-12">
+                                        <br>
+										<p class="top-10-margin">NET BANKING</p>
+									</div>
+									<div class="col-sm-4 col-xs-12">
+										<p><span class="small text-muted">Min. Amount</span><br>Rs. 10,000 & Above</p>
+									</div>
+									<div class="col-sm-4 col-xs-12">
+										<p><span class="small text-muted">Applicable Fees</span><br>Rs. 12+ Loading Charges</p>
+									</div>
+								</div>
+								<br><br>
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<p class="myMargin-zero">Click on the Button below to Top Up using Payment Gateway</p>
+										<br>
+										<button onclick="saveb(this.id)" id="PG" type="button" class="btn btn-primary special-btn-1">Go to Payment Gateway</button>
+									</div>
+								</div>
+							  </div>
+							</div>
+						</div>
+
+                        <!-- Tile 6 -->
+						<div class="col-sm-5 bank-2 newcard" >
+							<br>
+							<div class="panel panel-default common-panel-box my-3d-shadow" data-tile="6">
+							  <div class="panel-heading payGate-card other-tile-card">
+                                   <div class="bankimage2"> <img src="img/Others_Branch_Deposit.png" alt="Other Bank 1" class="img-responsive popup-hide"/>
+                                   </div>
+                                    <h2 class="card-head">Branch Deposit</h2>
+                                    <p class="pay-text text-bold">Get Top-Up on Cash Deposit at SBI or KVB Branch</p>
+							  </div>
+							  <div class="panel-body yesBank-body">
+                                    <ul class="steps-list text-left">
+                                        <li class="text-center">
+                                            <h4>Steps to Get Limit</h4>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <span class="step-num">Step 1</span>
+                                            <p class="myMargin-zero step-desc">Download & Print pre-filled Deposit Slip</p>
+                                        </li>
+                                        <li>
+                                            <span class="step-num">Step 2</span>
+                                            <p class="myMargin-zero step-desc">Fill Amount & Date on the Printed Slip</p>
+                                        </li>
+                                        <li>
+                                            <span class="step-num">Step 3</span>
+                                            <p class="myMargin-zero step-desc">Submit Slip at the Branch Counter</p>
+                                        </li>
+                                        <li>
+                                            <span class="step-num">Step 4</span>
+                                            <p class="myMargin-zero step-desc fix-long-text">Upload STAMPED Deposit slip using the Upload Button on the Top Right of the page</p>
+                                        </li>
+                                    </ul>
+                                   <br><br>
+                                    <div class="other-slip-box popup-hide">
+                                            <p class="text-center fbold">Select Bank & Download Slip</p>
+                                            <div class="input-field col s12">
+                                                <select id="bankname" name="bankname" onchange="buttonenable()">
+                                                <option value="no" selected>Select Bank(SBI, KVB)</option>
+                                                <option value="SBI">State Bank of India</option>
+                                                <option value="KVB">Kayur Vyasa Bank</option>
+                                                
+                                                </select>
+                                            </div>               
+                                            <ul class="list-inline text-center myMargin-zero">
+                                                <li>
+                                                    <button id="DepSlip" onclick="saveb(this.id)" type="button" class="btn btn-primary special-btn-1" disabled>Download Deposit Slip</button>
+                                                </li>
+                                                <li>
+                                                    <button id="ALetter" onclick="saveb(this.id)" type="button" class="btn btn-default special-btn-2" disabled>Download AMI Letter</button>
+                                                </li>
+                                            </ul>
+								    </div>
+                                    <br><br>
+								<p class="text-center bottom-tnc tile7-bottom-text" id="mobile-overlap-text">For Branch deposits under Rs.10000, Fees = Rs. 25/-</p>
+							  </div>
+							</div>
+						</div>
+
+
+                        <div class="col-sm-5 bank-2" >
+							<br>
+							<div class="panel panel-default common-panel-box my-3d-shadow" data-tile="6">
+							  <div class="panel-heading payGate-card other-tile-card">
+                                   <div class="bankimage4"> <img src="img/group.png" alt="Other Bank 1" class="img-responsive popup-hide"/>
+                                   </div>
+                                    <h2 class="card-head">CDM Deposit</h2>
+                                    <p class="pay-text text-bold">Get Top-Up on Cash Deposit at any of these Bank CDM</p>
+							  </div>
+							  <div class="panel-body yesBank-body">
+                                    <ul class="steps-list text-left">
+                                        <li class="text-center">
+                                            <h4>Steps to Get Limit</h4>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <span class="step-num">Step 1</span>
+                                            <p class="myMargin-zero step-desc">Deposit cash in the Machine</p>
+                                        </li>
+                                        <li>
+                                            <span class="step-num">Step 2</span>
+                                            <p class="myMargin-zero step-desc">Select a Bank below & enter the Account
+Number in the Cash Deposit Machine.</p>
+                                        </li>
+                                         <div class="other-slip-box popup-hide">
+                                            <p class="text-center fbold">Select Bank & Download Slip</p>
+                                            <div class="input-field col s12">
+                                                <select id="bank-name" name="bank-name" onchange="accountnumber()">
+                                                <option value="" disabled>Select Bank (SBI, KVB, ICICI, YES BANK)</option>
+                                              <option value="36018754088" selected>State Bank of India</option>
+												<option value="1629135000004263">Kayur Vyasa Bank</option>
+												<option value="002005033876">ICICI Bank</option>
+												<option value="019685700000042">YES Bank</option>
+
+                                                </select>
+                                            </div>
+                                            <ul class="list-inline text-center myMargin-zero">
+                                                <li>
+                                                     <p id="account-number" class="btn btn-primary special-btn-1">Account Number</p>
+                                                </li>
+                                            </ul>
+                                            <br><br>
+                                        <li>
+                                            <span class="step-num">Step 3</span>
+                                            <p class="myMargin-zero step-desc">Enter the Amount of Cash deposited</p>
+                                        </li>
+                                        <li>
+                                            <span class="step-num">Step 4</span>
+                                            <p class="myMargin-zero step-desc fix-long-text">Collect the Receipt from the Machine & Upload it using the ‘Upload’ button on the Top Right of page</p>
+                                        </li>
+                                    </ul>
+                                   <br><br>
+								    </div>
+                                    <br><br>
+								<p class="text-center bottom-tnc tile7-bottom-text" id="mobile-overlap-text">For Branch deposits under Rs.10000, Fees = Rs. 25/-</p>
+							  </div>
+							</div>
+						</div>
+                        
+
+
+
+                        <!-- CDM Modal -->
+                        <div id="cmdModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content" >
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Register & get your own CDM Card</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <div class="row cdm-feature-panel">
+                                        <div class="col-sm-6 col-xs-12 popup-hide">
+                                            <img src="img/tile4_CDM_card.png" alt="AXIS Bank" class="img-responsive main-logo-img"/>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <ul class="text-left feature-list fbold">
+                                                <li>Instant Limit</li>
+                                                <li>Get Limit directly from PayNearby</li>
+                                                <li>Free Delivery</li>
+                                                <li>
+                                                    <span class="pnb-bold-text">One time application charge Rs.500/-</span>
+                                                    <p class="small pnb-small-text">To be deducted from your wallet on Registration</p>
+                                                </li>
+                                            <ul>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <p class="text-center">Your Card will be delivered to your<br>address registered with PayNearby</p>
+                                    <div class="dummy-address-field">Address Fetched from back-end</div>
+                                   <div class="address"> <a href="#" class="change-address-link">Change Address</a>
+                                   </div>
+                                    <br>
+                                    <button type="button" id="regCDM" class="btn btn-primary special-btn-4" onclick="saveb(this.id)">Register for CDM Card</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                        
+				</div>
+			</div>
+        </div>
+
+</main>
+<div style="margin-bottom:100px">
+<script src="js/NavBar.js" type="text/javascript"></script>
+<script src="js/myscript.js"></script>
+<script src="js/Home.js"></script>
+ <script>
+    var data = {"uname":"abhishek"};
+    $.ajax({
+        url:"/bal",
+        type:"GET",
+        data:data,
+        success:function(data){
+            $(".balance").html(data);   
+        },
+        error:function(err){
+            console.log("Error hai bhai");
+        }
+    })
+</script> 
+
+</body>
+</html>

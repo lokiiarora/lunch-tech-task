@@ -1,0 +1,133 @@
+ .lab
+ {
+     font-weight: normal;
+ }
+ #product
+      {
+          margin-top: 5%;
+          margin-bottom: 18%
+      }
+      .product-table
+      {
+          margin-left: 10%;
+          width: 80%;
+      }
+       .myproduct
+      {
+          color: #49abc4;
+          font-size: 28px;
+          font-weight: bold;
+          margin-left: 10%;
+      }
+      .text-space
+      {
+          padding-right: 10%;
+      }
+      table
+      {
+          font-weight: bold;
+      }
+      td
+      {
+          color: #353535;
+          height: 80px;
+      }
+      th
+      {
+            color: #49abc4;
+      }
+      .space
+      {
+          margin-left:40px;
+      }
+      input
+      {
+          border-style: bold;
+          border-color: black;
+      }
+      .save-button
+      {
+          margin-top: 20px;
+          margin-left: 83.5%;
+          background-color: #49abc4;
+      }
+      .btn:hover
+      {
+          background-color: #49abc4;
+          font-weight: bold;
+          color: white;
+          box-shadow: 0 0 0 0 rgba(0,0,0,0.14), 0 0 0 0 rgba(0,0,0,0.12), 0 0 0 0 rgba(0,0,0,0.2);
+      }
+      .btn
+   {
+       text-transform: none;
+       border-radius: 0px;
+       background-color: #49abc4;
+       box-shadow: 0 0 0 0 rgba(0,0,0,0.14), 0 0 0 0 rgba(0,0,0,0.12), 0 0 0 0 rgba(0,0,0,0.2);
+    }
+    @media screen and (max-width:800px)
+    {
+        .save-button
+        {
+           margin-left: 40%; 
+        }
+    }
+   @media screen and (min-width:801px) and (max-width:900px)
+    {
+        .save-button
+        {
+           margin-left: 80%; 
+        }
+    }
+    @media screen and (min-width:901px) and (max-width:1024px)
+    {
+        .save-button
+        {
+           margin-left: 81%; 
+        }
+    }
+    @media screen and (min-width:1025px) and (max-width:1080px)
+    {
+        .save-button
+        {
+           margin-left: 81.2%; 
+        }
+    }
+     @media screen and (min-width:1081px) and (max-width:1250px)
+    {
+        .save-button
+        {
+           margin-left: 82%; 
+        }
+    }
+    @media screen and (min-width:1251px) and (max-width:1350px)
+    {
+        .save-button
+        {
+           margin-left: 83%; 
+        }
+    }
+    .input-field label 
+    {
+    color: #999999;
+    }
+    .input-field label:not(.label-icon).active {
+    color: #49abc4;
+    }    
+     .input-field input[type=number]:focus + label 
+    {
+     color: #49abc4;
+    }
+    button, input, optgroup, select, textarea 
+    {
+    color: #49abc4;
+    font-weight: bold;
+    }
+   .input-field input[type=number]:focus {
+     border-bottom: 1px solid #49abc4;
+     box-shadow: 0 1px 0 0 #49abc4;
+   }
+   button, input, optgroup, select, textarea 
+    {
+    color: #49abc4;
+    }

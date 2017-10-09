@@ -1,0 +1,50 @@
+      #product
+      {
+          margin-top: 8%;
+      }
+      .myproduct
+      {
+          color: #49abc4;
+          font-size: 28px;
+          font-weight: bold;
+          margin-left: 25%;
+      }
+      .product-table
+      {
+          margin-left: 25%;
+          font-size: 18px;
+          width: 50%;
+      }
+      th
+      {
+          color: #49abc4;
+      }
+      table
+      {
+          border-style: bold;
+          border-color: black;
+          margin-bottom: 5%;
+      }
+      td
+      {
+          height:80px;
+      }
+      button
+      {
+          background-color: #49abc4;
+          color: white;
+          border-style: none;
+          width: 85%;
+          height: 36px;
+          font-size: 16px;
+      }
+      button:hover
+      {
+          font-weight: bold;
+      }
+      @media screen and (max-width: 745px)
+      {
+          button{
+          height: 90%;
+          }
+      }

@@ -1,0 +1,336 @@
+ body
+    {
+        font-family: Roboto;
+    }
+    .balance
+    {
+        border-right: 1px border-style white;
+        background-color: #49abc4;
+    border: none;
+    color:white;
+     width: 151px;
+    height: 35px;
+    position: absolute;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: 73.7%;
+    z-index: 1500;
+    }
+    .butten {
+    background-color: #49abc4;
+    border: none;
+    color:white;
+     width: 151px;
+    height: 35px;
+    padding-right: 40px;
+    position: absolute;
+    line-height: 35px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: 84.3%;
+    }
+    .butten:hover
+    {
+        border: none border-style none;
+    }
+   /* .logout-but
+    {
+        background-image: url("logout-button.jpg");
+        margin-top: -20px;
+        margin-left: 75%;
+        width: 151px;
+        height: 35px;
+        border-style: solid;
+        border-color: transparent;
+    }*/
+    #logo
+    {
+          width: 161.5;
+          height: 66px;
+          margin-left: 43px;
+          margin-top: 22.5px;
+    }
+    
+    nav
+    {
+        height: 105px;
+       /* background-color:#49abc4;*/
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .navi
+    {
+        margin-right: 60px;
+        margin-top: 40px;
+    }
+
+    a:hover
+    {
+            background-color: transparent;
+            text-decoration: none;
+            font-weight: bold;
+            color: #49abc4;
+            color: transparent;
+            display: block;
+    }
+    nav ul li a
+    {
+            /* color:white;*/
+           color: #49abc4;
+             text-decoration: none;
+    }
+    nav ul li a:hover
+    {
+             text-decoration: none;
+             color: #49abc4;
+    }
+    ul li a:active
+        {
+            color: #49abc4;
+            font-weight: bold;
+            display: block;
+        }
+    .z-depth-0 
+    {
+        -webkit-box-shadow: 0 8px 6px -6px #999;
+        -moz-box-shadow: 0 8px 6px -6px #999;
+        box-shadow: 0 8px 6px -6px #999;
+
+    }
+     .dropdown-content
+        {
+            margin-top: 50px;
+            width: 200px;
+            font-size: 10px;
+            color: black;
+        }
+        .dropdown-content 
+        {
+            display: inherit;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a 
+        {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+    .dropdown-content a:hover 
+        {
+            background-color: #ffffff;
+        }
+    .nav-wrapper a:hover 
+        {
+            background-color: #ffffff;
+        }
+    /* Show the dropdown menu on hover */
+    .set:hover .dropdown-content
+        {
+            display: block;
+        }
+        .container
+       {
+           z-index: 10000;
+            background-color: #49abc4;
+            width: 100%;
+            height: 50%;
+            margin-top:8px;
+        }
+        ::-webkit-scrollbar 
+    {
+        height: 5px;
+        width: 5px;
+        background:white;
+    }
+
+    ::-webkit-scrollbar-thumb 
+    {
+        background: #49abc4;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background: white;
+    }
+        footer
+        {
+            z-index: 1000;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5%;
+            text-align: center;
+            color: white;
+            background-color: #49abc4;
+        }
+        .submenu
+         {
+        color: black; 
+        font-size: 14px;
+        }
+         @media screen and (min-width:1024px) and (max-width:1100px)
+        {
+            .balance
+            {
+                margin-left: 63%;
+            }
+            .butten
+            {
+                margin-left: 78.1%;
+            }
+        }
+         @media screen and (min-width:1101px) and (max-width:1280px)
+        {
+            .balance
+            {
+                margin-left: 70%;
+            }
+            .butten
+            {
+                margin-left: 82.2%;
+            }
+        }
+        @media screen and (min-width:1281px) and (max-width:1366px)
+        {
+            .balance
+            {
+                margin-left: 72.2%;
+            }
+            .butten
+            {
+                margin-left: 83.5%;
+            }
+        }
+        @media screen and (min-width:1400px) and (max-width:1700px)
+        {
+            .balance
+            {
+                margin-left: 77%;
+            }
+            .butten
+            {
+                margin-left: 86.5%;
+            }
+        }
+        @media screen and (max-width:600px)
+        {
+            .balance
+            {
+                margin-left: 65%;
+            }
+        }
+        @media screen and (max-width:995px)
+        {
+            #logo
+            {
+            margin-left: 10%;
+            }
+            #log-base
+            {
+            margin-top: -7%;
+            margin-left: 65%;
+            margin-right: 0%;
+            width: 40%;
+            height: 35.16%;
+            }
+            footer
+            {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8%;
+            text-align: center;
+            color: white;
+            background-color: #49abc4;
+            }
+            .side-nav
+            {
+                background-color: #ffffff;
+            }
+            .butten
+            {
+                margin-left: 60%;
+                display: none;
+            }
+        }
+      .side-nav
+      {
+          background-color: #ffffff;
+      }
+      .side
+      {
+          margin-left:10px;
+          color: #49abc4;
+          text-decoration: none;
+          display: block;
+      }
+      .side-style:hover
+      {
+            font-weight: bold;
+            text-decoration: none;
+            color: #49abc4;
+            display: block;
+            
+      }
+      .sub
+      {
+          margin-left:50px;
+          text-decoration: none;
+            display: block;
+      }
+      .sub li a:hover
+      {
+          background-color: transparent;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            display: block;
+      }
+      .side-style
+      {
+          text-decoration: none;
+       color: #49abc4; 
+       font-weight: normal;  
+      }
+      .s
+      {
+          color: black;
+          font-weight: normal;
+          background-color: #ffffff;
+      }
+      .s:hover
+      {
+             background-color: transparent;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            display: block;
+      }
+    .hamburger
+    {
+      margin-top: 40px;
+      margin-left: 25px;
+      height:30px;
+      width:30px;
+    }
+    .butt
+    {
+        position: absolute;
+        margin-top: 7px;
+        margin-left: -25px;
+        width: 20px;
+        height: 20px;
+    }

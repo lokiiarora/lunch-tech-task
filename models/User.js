@@ -4,17 +4,42 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
   email: { type: String, unique: true },
-  password: String,
-  citySelected: {type : Boolean, default: false},
-  google: String,
-  tokens: Array,
+  password: {type: String},
+  uname:{type:String, default:"Rungta"},
 
-  profile: {
-    name: String,
-    gender: String,
-    city: String,
-    area: String
-  }
+  profileDetails: {
+    name: {type: String},
+    gender: {type: String},
+    number:{type: String},
+    cname:{type: String},
+    approvalStatus:Boolean,
+    panNo:{type: String},
+    sTax:{type: String},
+    alt:{type: String}
+  },
+  idProof:{
+      option:{type: String},
+      proofNo:{type: String}
+  },
+  officeAdr:{
+    line1:{type: String},
+    line2:{type: String},
+    state:{type: String},
+    city:{type: String},
+    pin:{type: String},
+  },
+  addrDetails:{
+    type:{type: String},
+    proofNo:{type: String},
+  },
+  personalDetails:{
+    line1:{type: String},
+    line2:{type: String},
+    state:{type: String},
+    city:{type: String},
+    pin:{type: String},
+  },
+  balance:String
 }, { timestamps: true });
 
 /**
@@ -45,16 +70,6 @@ userSchema.methods.comparePassword = function comparePassword(candidatePassword,
 /**
  * Helper method for getting user's gravatar.
  */
-userSchema.methods.gravatar = function gravatar(size) {
-  if (!size) {
-    size = 200;
-  }
-  if (!this.email) {
-    return `https://gravatar.com/avatar/?s=${size}&d=retro`;
-  }
-  const md5 = crypto.createHash('md5').update(this.email).digest('hex');
-  return `https://gravatar.com/avatar/${md5}?s=${size}&d=retro`;
-};
 
 const User = mongoose.model('User', userSchema);
 

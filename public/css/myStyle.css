@@ -1,0 +1,989 @@
+/* Common Style */
+.h4, h4
+{
+	font-size:16px;
+	font-weight:bold;
+}
+.mainHome .row
+{
+	margin:0;
+}
+.mainHome .col-sm-12
+{
+	padding:0;
+}
+.mainHome .myMargin-zero
+{
+	margin:0;
+}
+.mainHome .myContent-middle
+{
+	margin:0 auto;
+}
+.mainHome .top-10-margin
+{
+	margin-top:10px;
+}
+.my-bottom-padding
+{
+	padding-bottom:15px !important;
+}
+.my-relative-pos
+{
+	position:relative;
+}
+.my-3d-shadow
+{
+	box-shadow:0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.mainHome .small
+{
+	font-size:11px;
+}
+
+
+/* PayNearBuy Home Css */
+
+.mainHome .instant-icon
+{
+	background:url('../img/instant_icon_blue.png') no-repeat;
+	width:40px;
+	height:25px;
+	display:inline-block;
+	vertical-align: middle;
+    background-size: 80%;
+}
+.mainHome .others-icon
+{
+	background:url('../img/others_icon_blue.png') no-repeat;
+	width:25px;
+	height:25px;
+	display:inline-block;
+	vertical-align: middle;
+    background-size: 80%;
+}
+.mainHome .custom-tabs
+{
+	width: 28%;
+    margin: 0 auto;
+	height: 44px;
+	z-index:1000;
+}
+.mainHome .instant-tab
+{
+	border: 2px solid #007BF7 !important;
+    border-bottom: none !important;
+    border-right: none !important;
+	height: 44px;
+	padding-top:10px !important;
+}
+.mainHome .others-tab
+{
+	border: 2px solid #007BF7 !important;
+    border-bottom: none !important;
+    border-left: none !important;
+	height: 44px;
+	padding-top:10px !important;
+}
+.mainHome .custom-tabs li.active>a
+{
+	background-color: #007BF7;
+    color: #fff;
+}
+.mainHome .custom-tabs li:not(.active)>a
+{
+	background-color:#fff;
+}
+.mainHome .custom-tabs li.active a .instant-icon
+{
+	background:url('../img/instant_icon_white.png') no-repeat;
+	width:40px;
+	height:25px;
+	display:inline-block;
+	vertical-align: middle;
+    background-size: 80%;
+}
+.mainHome .custom-tabs li.active a .others-icon
+{
+	background:url('../img/others_icon_white.png') no-repeat;
+	width:25px;
+	height:25px;
+	display:inline-block;
+	vertical-align: middle;
+    background-size: 80%;
+}
+.mainHome .main-description-tabs
+{
+	border:1px solid #888;
+	background:#F5F5F5;
+}
+.mainHome .main-logo-img
+{
+	margin:0 auto;
+}
+.mainHome .card-head
+{
+	margin:10px 0;
+}
+.mainHome .common-panel-box
+{
+	border-radius:10px;
+}
+.mainHome .yesBank-card
+{
+	background-color:#ACF2FF;
+	border-color:#ACF2FF;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+}
+.mainHome .text-bold
+{
+	font-weight:bold;
+}
+.mainHome .text-muted
+{
+	color:#606060;
+}
+.mainHome .bubble-quote
+{
+	display:block;
+	position:relative;
+	margin:15px;
+	background-color:#DDDDDD;
+	max-width:none;
+	z-index:0;
+}
+.mainHome .bubble-quote .popover-content
+{
+	padding-left:0;
+	padding-right:0;
+}
+.mainHome .bubble-quote .arrow:after
+{
+	border-bottom-color:#DDDDDD;
+}
+.mainHome .steps-list
+{
+	list-style:none;
+	padding:0;
+}
+.mainHome .yesBank-body
+{
+	padding-left:0;
+	padding-right:0;
+	padding-top:0;
+}
+.mainHome .steps-list>li
+{
+	margin-top:5px;
+	margin-bottom:5px;
+	padding:10px;
+}
+.mainHome .steps-list>li:nth-child(even)
+{
+	background-color:#EBEBEB;
+}
+.mainHome .dummy-text-field
+{
+	padding:5px;
+	border:1px solid rgb(244,244,244);
+	background-color:rgb(244,244,244);
+	font-weight:bold;
+	box-shadow:0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+	position:relative;
+}
+.mainHome .dummy-text-field .num-indicator, .mainHome .dummy-text-field .letter-indicator
+{
+	color:#009D12;
+}
+.mainHome .dummy-text-field .num-text
+{
+	position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    margin-left: -15px;
+	color:#009D12;
+}
+.mainHome .dummy-text-field .letter-text
+{
+	position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    margin-left: -25px;
+	color:#009D12;
+}
+.mainHome .caption-text
+{
+	margin: 5px 0 0 0;
+}
+.mainHome .cards-wrapper
+{
+	padding-left:70px;
+	padding-right:70px;
+}
+.mainHome .yesBank-body .no-download-box
+{
+	padding:10px 30px;
+	background-color:#6B6C6E;
+	color:#fff;
+	text-align:center;
+	margin:30px;
+}
+/* Axis Bank Card */
+.mainHome .axisBank-card
+{
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	background-color:transparent;
+	border:none;
+	padding-bottom:0;
+}
+.mainHome .axisBank-card .tile2_axis_img,.mainHome .axisBank-card .tiles_axis_img
+{
+	width: 285px;
+    padding-top: 10px;
+}
+.mainHome .axisBank-body
+{
+	padding-left: 0;
+    padding-right: 0;
+	padding-top:0;
+}
+.mainHome .axisBank-body .steps-list>li:nth-child(odd)
+{
+	background-color:#EBEBEB;
+}
+.mainHome .axisBank-body .steps-list>li:nth-child(even)
+{
+	background-color:transparent;
+}
+.mainHome .axis-btn
+{
+	color:#fff;
+	background-color:#AE285D;
+	font-weight:bold;
+}
+.mainHome .special-btn-1
+{
+	font-weight:bold;
+	font-size:12px;
+	background-color:#167BFF;
+	padding:1em;
+	border-radius:3px;
+}
+.mainHome .special-btn-2
+{
+	font-weight:bold;
+	font-size:12px;
+	padding:1em;
+	border-radius:3px;
+	border:2px solid #585858;
+	color:#585858;
+}
+.mainHome .special-btn-3
+{
+	font-weight:bold;
+	font-size:12px;
+	background-color:#00C14A;
+	padding:1em;
+	border-radius:3px;
+	margin:10px;/* auto 0;
+	width:300px;*/
+}
+.mainHome .bottom-tnc
+{
+	position: absolute;
+    bottom: 15px;
+    right: 0;
+    left: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+.mainHome .gray-panel
+{
+	background-color:#DDDDDD;
+	padding:15px 5px;
+	overflow:hidden;
+}
+.mainHome .half-axis-img
+{
+	height:100px;
+	position:relative;
+	left:-90px;
+}
+.mainHome .tile4-wrapper .bottom-tnc
+{
+	bottom:30px;
+}
+.mainHome .payGate-card
+{
+	background-color: #E5E5E5;
+    border-color: #E5E5E5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.mainHome .payment-gate-info
+{
+	background-color:#DDDDDD;
+	padding-top:20px;
+}
+
+.mainHome .upper-logo-div
+{
+	background-color:#EAEAEA;
+	text-align: center;
+}
+.mainHome .upper-logo-div img
+{
+	width:150px;
+	position:relative;
+	top:7px;
+}
+.mainHome .upper-logo-div p
+{
+	position:relative;
+	bottom:10px;
+}
+.mainHome .bank-strip .col-xs-2
+{
+	padding-left:1px;
+	padding-right:1px;
+}
+.mainHome .steps-btn
+{
+	display:none;
+}
+.mainHome .axisBank-card .for-mobile, .mainHome .payGate-card .mobile-pay-head
+{
+	display:none;
+}
+.mainHome .payGate-card .pay-text
+{
+	font-size: 23px;
+	padding:5px;
+}
+.mainHome .mobile-cards-wrapper
+{
+	display:none;
+}
+.mainHome .mobile-top-caption
+{
+	margin-top: 20px;
+    margin-bottom: 0;
+}
+.mainHome .mobile-bank-strip
+{
+	display:none;
+	background-color:#fff;
+	padding-top:20px;
+	padding-bottom:20px;
+	margin-bottom:10px;
+}
+.mainHome .custom-tabs.affix
+{
+	top:0;
+}
+.mainHome .popup-hide
+{
+	display:block;
+}
+.mainHome .popup-show
+{
+	display:none;
+}
+.mainHome .cam_upload
+{
+	background:url('../img/cam_upload.png') no-repeat;
+	display: inline-block;
+    vertical-align: bottom;
+    width: 21px;
+    height: 18px;
+    margin-right: 15px;
+}
+
+/* Modal Css */
+.mainHome #myModal .modal-content
+{
+	border-radius:2px;
+}
+.mainHome #myModal .modal-dialog
+{
+	width:400px;
+	margin:10px auto;
+}
+.mainHome #myModal .card-head
+{	
+	font-size:25px;
+	margin-bottom:5px;
+}
+.mainHome #myModal .payGate-card .pay-text
+{
+	line-height:1.2;
+	font-size:18px;
+}
+.mainHome #myModal .modal-footer button
+{
+	background-color:#67B6E6;
+}
+.mainHome #myModal .modal-body
+{
+	padding:0;
+}
+.mainHome #myModal .modal-footer
+{
+	border:none;
+}
+.mainHome #myModal .modal-content button.close
+{
+	font-size: 40px;
+	opacity:1;
+}
+.mainHome #myModal .modal-body .yesBank-card
+{
+	background-color:#E5E5E5;
+	border-color:#E5E5E5;
+}
+.mainHome #myModal .modal-body .axisBank-card
+{
+	background-color:#E5E5E5;
+	border-color:#E5E5E5;
+	padding-bottom:10px;
+}
+.mainHome #myModal .modal-body .axisBank-card p.text-bold,
+.mainHome #myModal .modal-body .yesBank-card p.text-bold
+{
+	font-size:18px;
+	line-height:1.2;
+}
+.mainHome #myModal .modal-body .bottom-tnc
+{
+	color:#0071E2;
+}
+.mainHome #myModal .modal-body .tile4-wrapper .bottom-tnc
+{
+	bottom:15px;
+}
+.mainHome #myModal .modal-body .axisBank-body img.popup-show
+{
+	width:200px;
+	margin-bottom:10px;
+}
+/* Other tab tiles */
+
+.mainHome .other-slip-box
+{
+	background-color:#DEDEDE;
+	margin:10px;
+	padding:10px;
+}
+.mainHome .other-slip-box select
+{
+	margin-bottom:10px;
+}
+.mainHome .step-num,.mainHome .step-desc
+{
+	display:inline-block;
+	vertical-align:top;
+	padding-left:5px;
+	padding-right:5px;
+}
+.mainHome .fix-long-text
+{
+	width:250px;
+}
+.mainHome .clear-space
+{
+	height:50px;
+}
+.mainHome .hide-in-mobile
+{
+	display:inline-block;
+}
+.mainHome .show-in-mobile
+{
+	display:none;
+}
+.mainHome #others .xs-small-screen-img
+{
+	width:100px;
+}
+.mainHome #others .tile7-bottom-text
+{
+	bottom:25px;
+}
+.mainHome #others .yesBank-body #bankSelect
+{
+	width: 80%;
+    margin: 10px auto;
+}
+.mainHome #others .yesBank-body .bubble-quote .popover-content
+{
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.mainHome #others #bank-ac-num
+{
+	width: 80%;
+    margin: 0 auto 10px;
+	text-align:center;
+}
+.bank-selected
+{
+	background-color:#007BF7 !important;
+	border-color:#007BF7 !important;
+	color:#fff;
+    font-size: 20px !important;
+    letter-spacing: 4px;
+}
+
+
+/* CDM Modal */
+
+#cmdModal .modal-body
+{
+	padding-left:0;
+	padding-right:0;
+}
+#cmdModal .modal-body .cdm-feature-panel
+{
+	background-color:#E8F4F7;
+	padding:15px;
+}
+#cmdModal .modal-body .feature-list li
+{
+	color:#646464;
+}
+#cmdModal .modal-body .feature-list li .pnb-bold-text
+{
+	font-weight:bold;
+	color:#24525F;
+}
+#cmdModal .modal-body .feature-list li .pnb-small-text
+{
+	color:#24525F;
+}
+/*#cmdModal .modal-body .feature-list li::before 
+{
+  content: "• ";
+  color: #4AACC4;
+  font-size:14px;
+}*/
+#cmdModal .dummy-address-field
+{
+	border:1px solid #95989A;
+	padding:15px;
+	color:#95989A;
+	font-size:12px;
+	width: 60%;
+    margin: 10px auto;
+}
+#cmdModal .modal-header
+{
+	border:none;
+	padding-bottom:0;
+}
+#cmdModal .modal-header .modal-title
+{
+	font-size:22px;
+	color:#24525F;
+}
+#cmdModal .change-address-link
+{
+	color:#0099FF;
+	font-size:12px;
+	text-decoration:underline;
+	font-weight:bold;
+}
+#cmdModal .special-btn-4
+{
+	background-color:#24525F;
+	font-weight:bold;
+	font-size:14px;
+	margin-top:10px;
+}
+#cmdModal .modal-header button.close
+{
+	font-size: 40px;
+    opacity: 1;
+}
+#cmdModal .modal-body .half-popup-img
+{
+	height:210px;
+	overflow:hidden;
+	margin-top:10px;
+}
+
+@media screen and (max-width:1260px)
+{
+	.mainHome .custom-tabs
+	{
+		width:32%;
+	}
+	.mainHome .dummy-text-field
+	{
+		font-size:12px;
+	}
+	.mainHome .cards-wrapper
+	{
+		padding-left:20px;
+		padding-right:20px;
+	}
+}
+@media screen and (max-width:1190px)
+{
+	.mainHome .special-btn-1
+	{
+		margin:1em;
+	}
+	.mainHome #others .special-btn-1
+	{
+		margin:0;
+	}
+}
+
+/* Mobile Design Begins */
+@media screen and (max-width:1170px)
+{
+	.mainHome .bank-strip
+	{
+		display:none;
+	}
+	.mainHome .custom-tabs
+	{
+		width:100%;
+	}
+	.mainHome .mobile-cards-wrapper .col-sm-4
+	{
+		width:50%;
+	}
+	.mainHome .mobile-cards-wrapper
+	{
+		display:block;
+	}
+	.mainHome .cards-wrapper
+	{
+		display:none;
+	}
+	.mainHome .mobile-cards-wrapper .yesBank-mobile-card, .mainHome .mobile-cards-wrapper .payGate-mobile-card
+	{
+		background-color:transparent;
+		border-color:transparent;
+		position: absolute !important;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-ms-transform: translateX(-50%) translateY(-50%);
+		-o-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.mainHome .mobile-cards-wrapper .steps-btn
+	{
+		display:inline-block;
+		font-size:15px;
+		height: 25px;
+		line-height: 0;
+	}
+	.mainHome .mobile-cards-wrapper .card-head
+	{
+		font-size: 30px;
+		font-weight: bold;
+	}
+	.mainHome .mobile-cards-wrapper .yesBank-mobile-card p.text-bold, .mainHome .mobile-cards-wrapper .axisBank-mobile-card p.text-bold,
+	.mainHome .mobile-cards-wrapper .payGate-mobile-card .pay-text
+	{
+		font-size:24px;
+		font-weight:normal;
+		padding:5px;
+	}
+	.mainHome .mobile-cards-wrapper .axisBank-mobile-card .for-mobile,
+	.mainHome .mobile-cards-wrapper .yesBank-mobile-card .for-mobile 
+	{
+		display:block;
+		background-color: #EAEAEA;
+		margin-top:10px;
+		padding:15px;
+	}
+	.mainHome .mobile-cards-wrapper .for-mobile .mobile-img-div
+	{
+		width:200px;
+		/*transform: scale(1.2,1.2);
+		-webkit-transform:scale(1.2,1.2);
+		margin-left: 15px;*/
+	}
+	.mainHome .mobile-cards-wrapper .for-mobile .axis-mobile p
+	{
+		font-size: 16px;
+		margin: 5px 0;
+	}
+	.mainHome .mobile-cards-wrapper .payGate-mobile-card
+	{
+		background-color:transparent;
+		border-color:transparent;
+		border-radius:2px;
+	}
+	.mainHome .mobile-cards-wrapper .mobile-common-panel-box
+	{
+		border-radius:2px;
+	}
+	.mainHome .mobile-cards-wrapper .payGate-mobile-card .card-head
+	{
+		display:none;
+	}
+	.mainHome .mobile-cards-wrapper .payGate-mobile-card .mobile-pay-head
+	{
+		display:block;
+	}
+	.mainHome .mobile-cards-wrapper .axisBank-mobile-card .tile2_axis_img
+	{
+		display:none;
+	}
+	.mainHome .mobile-cards-wrapper .axisBank-mobile-card
+	{
+		background-color:transparent;
+		border-color:transparent;
+	}
+	.mainHome .mobile-top-caption,.mainHome .mobile-bank-strip
+	{
+		display:block;
+	}
+	.mainHome .others-tab,.mainHome .instant-tab
+	{
+		border-bottom:2px solid #007BF7 !important;
+	}
+	.mainHome .popup-hide
+	{
+		display:none;
+	}
+	.mainHome .popup-show
+	{
+		display:block;
+	}
+	.mainHome #others .tile7-bottom-text
+	{
+		bottom:0;
+	}
+	.mainHome .mobile-top-caption
+	{
+		font-size:20px;
+		text-shadow:0px 0px 2px #ccc;
+	}
+}
+@media screen and (max-width:900px)
+{
+	.mainHome .mobile-cards-wrapper .for-mobile .axis-mobile p,.mainHome .mobile-cards-wrapper .for-mobile .axis-mobile button
+	{
+		font-size:12px;
+	}
+}
+@media screen and (max-width:840px)
+{
+	/*.mainHome .mobile-cards-wrapper .for-mobile .mobile-img-div
+	{
+		margin-top:-5px;
+		margin-bottom:-5px;
+	}*/
+	.mainHome .mobile-cards-wrapper .yesBank-mobile-card p.text-bold, .mainHome .mobile-cards-wrapper .axisBank-mobile-card p.text-bold
+	{
+		font-size:20px;
+		padding:5px;
+	}
+	.mainHome .mobile-cards-wrapper .card-head
+	{
+		font-size:28px;
+	}
+	.mainHome .mobile-cards-wrapper .payGate-mobile-card .pay-text
+	{
+		font-size:20px;
+	}
+	.mainHome .mobile-cards-wrapper .for-mobile .mobile-img-div
+	{
+		margin-top:10px;
+	}
+}
+@media screen and (max-width:767px)
+{
+	.mainHome .custom-tabs
+	{
+		height:auto;
+		display: table;
+		table-layout: fixed;
+		text-align: center;
+		margin-bottom: -5px;
+	}
+	.mainHome .custom-tabs>li
+	{
+		display: table-cell;
+		width: 100%;
+		height: auto;
+	}
+	.mainHome .custom-tabs>li a
+	{
+		border-radius:2px;
+		padding:10px 10px;
+	}
+	.mainHome .mobile-cards-wrapper .col-sm-4
+	{
+		width:100%;
+	}
+	.mainHome .mobile-cards-wrapper .yesBank-mobile-card p.text-bold, .mainHome .mobile-cards-wrapper .axisBank-mobile-card p.text-bold
+	{
+		font-size:24px;
+		padding:0 10px;
+	}
+	.mainHome .mobile-cards-wrapper .card-head
+	{
+		font-size:30px;
+	}
+	.mainHome .mobile-cards-wrapper .payGate-mobile-card .pay-text
+	{
+		font-size:24px;
+		padding:0 10px;
+	}
+	.mainHome .mobile-cards-wrapper .for-mobile .axis-mobile p
+	{
+		padding:10px;
+		font-size:16px
+	}
+	/*.mainHome .mobile-bank-strip img
+	{
+		width:100px;
+	}*/
+	.mainHome .mobile-cards-wrapper .yesBank-mobile-card, .mainHome .mobile-cards-wrapper .payGate-mobile-card
+	{
+		background-color:transparent;
+		border-color:transparent;
+		position: relative !important;
+		width: 100%;
+		top: 0;
+		left: 0;
+		-webkit-transform: translateX(0) translateY(0);
+		-moz-transform: translateX(0) translateY(0);
+		-ms-transform: translateX(0) translateY(0);
+		-o-transform: translateX(0) translateY(0);
+		transform: translateX(0) translateY(0);
+	}
+	.mainHome .small-screen-img
+	{
+		width:200px;
+	}
+	 .mainHome .mobile-cards-wrapper .axisBank-mobile-card p.text-bold
+	 {
+		padding-bottom:10px;
+	 }
+	.mainHome .dummy-text-field
+	{
+		font-size:16px;
+	}
+	.mainHome .mobile-cards-wrapper .for-mobile .mobile-img-div
+	{
+		margin-top:0;
+	}
+	.mainHome .upload-top-btn
+	{
+		text-align:center !important;
+	}
+}
+
+@media screen and (max-width:570px)
+{
+	/*.mainHome .mobile-cards-wrapper .axisBank-mobile-card .for-mobile
+	{
+		background-color:transparent;
+	}*/
+	#cmdModal .modal-body .half-popup-img
+	{
+		width: 300px;
+		margin: 10px auto 0;
+		height: 150px;
+	}
+}
+
+@media screen and (max-width:450px)
+{
+	/*.mainHome .mobile-bank-strip img
+	{
+		width:65px;
+	}*/
+	.mainHome .custom-tabs>li a
+	{
+		padding:5px;
+	}
+	.mainHome .mobile-cards-wrapper .for-mobile .axis-mobile p
+	{
+		font-size:12px;
+	}
+	.mainHome .mobile-cards-wrapper .yesBank-mobile-card p.text-bold, .mainHome .mobile-cards-wrapper .axisBank-mobile-card p.text-bold
+	{
+		font-size:20px;
+	}
+	.mainHome .mobile-cards-wrapper .card-head
+	{
+		font-size:26px;
+	}
+	.mainHome .hide-in-mobile
+	{
+		display:none;
+	}
+	.mainHome .show-in-mobile
+	{
+		display:inline-block;
+	}
+	.mainHome .axis-mobile
+	{
+		margin-bottom:15px;
+	}
+	.mainHome .mobile-cards-wrapper .for-mobile .mobile-img-div
+	{
+		transform:scale(1,1);
+		-webkit-transform:scale(1,1);
+		margin:10px 0;
+	}
+	.mainHome .mobile-cards-wrapper .my-left-pad-zero
+	{
+		padding-left:0;
+	}
+	.mainHome .mobile-cards-wrapper .payGate-mobile-card .pay-text
+	{
+		font-size:20px;
+	}
+	.mainHome #others .xs-small-screen-img
+	{
+		width:75px;
+	}
+	.mainHome #others .yesBank-mobile-card .huge-banks-imgs .xs-sbi-logo
+	{
+		width:70px;
+	}
+	.mainHome #others .yesBank-mobile-card .huge-banks-imgs .xs-kvb-logo
+	{
+		width:35px;
+	}
+}
+@media screen and (max-width:400px)
+{
+	.mainHome #myModal .modal-dialog
+	{
+		width:320px;
+	}
+	.mainHome #myModal .modal-body .mobile-space-fix
+	{
+		padding-bottom:25px;
+	}
+	/*.mainHome #myModal .modal-content .other-tile-card button.close
+	{
+		margin-top:25px;
+	}*/
+	.mainHome #myModal .modal-body #mobile-overlap-text
+	{
+		bottom:-15px;
+	}
+}
+/*@media screen and (max-height:720px)
+{
+	.mainHome #myModal .modal-dialog
+	{
+		top:70%;
+	}
+}*/
