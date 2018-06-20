@@ -7,7 +7,7 @@
   },
   "author": "Lokesh Raj Arora",
   "scripts": {
-    "seed":"node seed.js",
+    "seed": "node seed.js",
     "start": "nodemon app.js && node seed.js",
     "test": "mocha --reporter spec",
     "postinstall": "npm rebuild node-sass",
@@ -61,7 +61,7 @@
     "twilio": "^3.3.1-edge",
     "twit": "^2.2.5",
     "validator": "^7.0.0",
-    "snyk": "^1.41.1"
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
